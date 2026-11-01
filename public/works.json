@@ -1,0 +1,1078 @@
+{
+ "realm": "弘道祥雲仙域",
+ "sourceOverviewUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/#works",
+ "islands": [
+  {
+   "id": "gewu",
+   "name": "格物知微島",
+   "category": "學科學習",
+   "guardian": "麒麟",
+   "vehicle": "飛劍",
+   "color": "#1B3A3A",
+   "accent": "#9B2C2C",
+   "works": [
+    {
+     "id": "gewu-01",
+     "buildingName": "九章算經閣",
+     "buildingType": "閣",
+     "originalName": "會考數學考點研究室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從高頻公式與年度加權分析安排複習，掌握觀念後練習275題原題，搭配具體解題步驟與學習能力指標。",
+     "destinationUrl": "https://cap-math-review.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟數學科複習網頁",
+       "url": "https://cap-math-review.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "考點研究室｜會考數學"
+      }
+     ]
+    },
+    {
+     "id": "gewu-02",
+     "buildingName": "輿地通鑑閣",
+     "buildingType": "閣",
+     "originalName": "會考社會考點研究室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從年度加權考點分析安排複習，閱讀地理、歷史與公民觀念，再練習585題原題與完整詳解。",
+     "destinationUrl": "https://cap-social-review.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟社會科複習網頁",
+       "url": "https://cap-social-review.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "會考社會考點研究室｜十年原題與能力複習"
+      }
+     ]
+    },
+    {
+     "id": "gewu-03",
+     "buildingName": "文心雕龍閣",
+     "buildingType": "閣",
+     "originalName": "會考國文考點研究室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從字詞、文意到閱讀推論，依高頻考點與學習能力指標安排複習，練習450題原題與逐項詳解。",
+     "destinationUrl": "https://cap-chinese-review.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟國文科複習網頁",
+       "url": "https://cap-chinese-review.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "會考國文考點研究室｜十年原題與能力複習"
+      }
+     ]
+    },
+    {
+     "id": "gewu-04",
+     "buildingName": "譯典通幽閣",
+     "buildingType": "閣",
+     "originalName": "會考英文考點研究室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從詞彙、句型與閱讀線索出發，練習420題英文閱讀原題，對照學習能力指標及A～D逐項詳解。",
+     "destinationUrl": "https://cap-english-review.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟英文科複習網頁",
+       "url": "https://cap-english-review.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "會考英文考點研究室｜十年原題與能力複習"
+      }
+     ]
+    },
+    {
+     "id": "gewu-05",
+     "buildingName": "格物窮理殿",
+     "buildingType": "殿",
+     "originalName": "會考自然考點研究室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "依生物、物理、化學與地球科學高頻考點複習，練習520題完整詳解，148個運算題附具體計算步驟。",
+     "destinationUrl": "https://cap-science-review.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟自然科複習網頁",
+       "url": "https://cap-science-review.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "會考自然考點研究室｜十年原題與能力複習"
+      }
+     ]
+    },
+    {
+     "id": "gewu-06",
+     "buildingName": "百草辨識洞府",
+     "buildingType": "洞府",
+     "originalName": "生物觀察室｜單元學習與評量整合版",
+     "cardType": "工具卡",
+     "accessNote": "第一單元試作・僅本人存取",
+     "originalDescription": "串起三小節教材、30題單元測驗與10個知識點補強，從錯題返回對應教材，再用原題重練確認。",
+     "destinationUrl": "https://biology-learning-unit1.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往作品（需登入／授權）",
+       "url": "https://biology-learning-unit1.cjs-1359.chatgpt.site/",
+       "status": "401",
+       "title": "Sign in required"
+      }
+     ],
+     "requiresLogin": true
+    },
+    {
+     "id": "gewu-07",
+     "buildingName": "造化探源樓",
+     "buildingType": "樓",
+     "originalName": "生物觀察室｜國中生物互動教材",
+     "cardType": "技能卡",
+     "accessNote": "三節保留版・僅本人存取",
+     "originalDescription": "從發現生命、科學方法到進入實驗室，透過互動觀察、實驗設計與44題解析，練習理解國中生物。",
+     "destinationUrl": "https://biology-field-notes.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往作品（需登入／授權）",
+       "url": "https://biology-field-notes.cjs-1359.chatgpt.site/",
+       "status": "401",
+       "title": "Sign in required"
+      }
+     ],
+     "requiresLogin": true
+    },
+    {
+     "id": "gewu-08",
+     "buildingName": "訂誤知微亭",
+     "buildingType": "亭",
+     "originalName": "生物(一)｜單元錯題本",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入展示版",
+     "originalDescription": "依單元與範圍練習 4 回、120 題，交卷後查看解析、歷史錯題與需要補強的知識點。",
+     "destinationUrl": "https://biology-practice-demo.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟免登入展示版",
+       "url": "https://biology-practice-demo.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "生物(一)｜單元錯題本"
+      }
+     ]
+    },
+    {
+     "id": "gewu-09",
+     "buildingName": "天衍幻方亭",
+     "buildingType": "亭",
+     "originalName": "拉馬努金生日幻方",
+     "cardType": "工具卡",
+     "accessNote": null,
+     "originalDescription": "用生日產生專屬 4×4 幻方，探索加總規律，也練習台語數字文讀音。",
+     "destinationUrl": "https://taigi-birthday-magic.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開始探索",
+       "url": "https://taigi-birthday-magic.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "拉馬努金生日幻方｜數字魔法教室・台語版"
+      }
+     ]
+    },
+    {
+     "id": "gewu-10",
+     "buildingName": "山河尋脈閣",
+     "buildingType": "閣",
+     "originalName": "地理脈絡",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "從知識點出發，串起概念、練習與錯題訂正，建立有脈絡的地理學習。",
+     "destinationUrl": "https://geography-context-unit-one.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "進入學習",
+       "url": "https://geography-context-unit-one.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "地理脈絡｜地理一學習系統"
+      }
+     ]
+    },
+    {
+     "id": "gewu-11",
+     "buildingName": "時空鑑史閣",
+     "buildingType": "閣",
+     "originalName": "歷史數位教材",
+     "cardType": "技能卡",
+     "accessNote": "單元試作",
+     "originalDescription": "用時間、空間與史料，練習理解事件之間的關係。",
+     "destinationUrl": "https://geography-context-unit-one.cjs-1359.chatgpt.site/history",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟教材",
+       "url": "https://geography-context-unit-one.cjs-1359.chatgpt.site/history",
+       "status": "200",
+       "title": "歷史現場｜歷史一數位學習教材"
+      }
+     ]
+    },
+    {
+     "id": "gewu-12",
+     "buildingName": "公式歸真樓",
+     "buildingType": "樓",
+     "originalName": "數學數位講義",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "把公式連回生活，透過逐步例題與互動探索理解解題方法。",
+     "destinationUrl": "https://geography-context-unit-one.cjs-1359.chatgpt.site/math",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "進入學習",
+       "url": "https://geography-context-unit-one.cjs-1359.chatgpt.site/math",
+       "status": "200",
+       "title": "數學有步驟｜數學三數位講義"
+      }
+     ]
+    },
+    {
+     "id": "gewu-13",
+     "buildingName": "盲點照心殿",
+     "buildingType": "殿",
+     "originalName": "金頭腦",
+     "cardType": "工具卡",
+     "accessNote": "需授權",
+     "originalDescription": "結合知識節點、教材圖表與選項診斷，找出學習中的盲點。",
+     "destinationUrl": "https://kingan-ai-tutor-geo.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟網站（需授權）",
+       "url": "https://kingan-ai-tutor-geo.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "金安 AI Tutor｜地理智慧學伴"
+      }
+     ]
+    },
+    {
+     "id": "gewu-14",
+     "buildingName": "論劍決勝殿",
+     "buildingType": "殿",
+     "originalName": "會考論劍",
+     "cardType": "工具卡",
+     "accessNote": "需授權",
+     "originalDescription": "以五科歷屆試題為入口，在一次次練習中累積理解。",
+     "destinationUrl": "https://focus-ritual-study.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往作品（需登入／授權）",
+       "url": "https://focus-ritual-study.cjs-1359.chatgpt.site",
+       "status": "401",
+       "title": "Sign in required"
+      }
+     ],
+     "requiresLogin": true
+    }
+   ]
+  },
+  {
+   "id": "xuanji",
+   "name": "璇璣演道島",
+   "category": "AI 教師研習",
+   "guardian": "通犀",
+   "vehicle": "玉如意",
+   "color": "#2E3A87",
+   "accent": "#B08D57",
+   "works": [
+    {
+     "id": "xuanji-01",
+     "buildingName": "繪形點睛閣",
+     "buildingType": "閣",
+     "originalName": "圖像提示詞實作教室",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "從用途與受眾出發，練習六個提示詞要素，再用局部修改與自評清單，讓圖像更符合需求。",
+     "destinationUrl": "https://image-prompt-classroom.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "進入實作教室",
+       "url": "https://image-prompt-classroom.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "圖像提示詞實作教室"
+      }
+     ]
+    },
+    {
+     "id": "xuanji-02",
+     "buildingName": "追問洞府",
+     "buildingType": "洞府",
+     "originalName": "問深一點",
+     "cardType": "工具卡",
+     "accessNote": "試用版・需授權",
+     "originalDescription": "一次追問一件事，從具體觀察、原因與證據，整理出可執行的下一步。",
+     "destinationUrl": "https://wen-shen-yidian-20260910.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往作品（需登入／授權）",
+       "url": "https://wen-shen-yidian-20260910.cjs-1359.chatgpt.site",
+       "status": "401",
+       "title": "Sign in required"
+      }
+     ],
+     "requiresLogin": true
+    },
+    {
+     "id": "xuanji-03",
+     "buildingName": "傳道授業樓",
+     "buildingType": "樓",
+     "originalName": "AI 教學實作課",
+     "cardType": "技能卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從概念說明、教師範例到實作練習，陪伴國中小教師把 AI 帶進備課與課堂。",
+     "destinationUrl": "https://ai-teaching-practice-class.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟數位教材",
+       "url": "https://ai-teaching-practice-class.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "AI 教學實作課｜國中小教師數位教科書"
+      }
+     ]
+    },
+    {
+     "id": "xuanji-04",
+     "buildingName": "舊卷藏珍閣",
+     "buildingType": "閣",
+     "originalName": "AI 教學實作課｜前一版",
+     "cardType": "技能卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "保留作品集原先內嵌的教材版本，呈現前一版教師 AI 研習內容與互動功能。",
+     "destinationUrl": "https://ai-teaching-practice-legacy.cjs-1359.chatgpt.site/",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟前一版教材",
+       "url": "https://ai-teaching-practice-legacy.cjs-1359.chatgpt.site/",
+       "status": "200",
+       "title": "AI 教學實作課｜國中小教師數位教科書"
+      }
+     ]
+    },
+    {
+     "id": "xuanji-05",
+     "buildingName": "三才匯機殿",
+     "buildingType": "殿",
+     "originalName": "ChatGPT × Codex × Work",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "從理解工具到改寫情境，練習把 AI 用在自己的教學任務。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/chatgpt/index.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "閱讀教材",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/chatgpt/index.html",
+       "status": "200",
+       "title": "ChatGPT × Codex × Work 教師必修課｜互動式數位教材"
+      },
+      {
+       "label": "下載講師手冊",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/instructor-manual.docx",
+       "status": "200",
+       "title": ""
+      },
+      {
+       "label": "下載六課活動單",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/worksheets.docx",
+       "status": "200",
+       "title": ""
+      }
+     ]
+    },
+    {
+     "id": "xuanji-06",
+     "buildingName": "雙子講經閣",
+     "buildingType": "閣",
+     "originalName": "Gemini 數位講義",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "透過概念、範例與操作練習，探索 AI 輔助教學與資料整理。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/gemini/index.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "閱讀教材",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/gemini/index.html",
+       "status": "200",
+       "title": "Gemini × Gemini Notebook 教師學習工作室｜互動式數位教材"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yayun",
+   "name": "雅韻鄉土島",
+   "category": "台語教學",
+   "guardian": "墨熊",
+   "vehicle": "雲舟",
+   "color": "#D97B3F",
+   "accent": "#3A6EA5",
+   "works": [
+    {
+     "id": "yayun-01",
+     "buildingName": "六島讀冊樓",
+     "buildingType": "樓",
+     "originalName": "讀冊人 ê 台語生活島",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "走進六座小島，練習台羅、語詞、句型與早餐點餐，再前往黑熊學院與造句島延伸學習。",
+     "destinationUrl": "https://taigi-life-islands.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "走進台語生活島",
+       "url": "https://taigi-life-islands.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "讀冊人 ê 台語生活島｜做伙學，做伙耍"
+      }
+     ]
+    },
+    {
+     "id": "yayun-02",
+     "buildingName": "黑熊習音殿",
+     "buildingType": "殿",
+     "originalName": "台語黑熊學院",
+     "cardType": "技能卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "跟著黑熊老師，從聲母、母音與拼音走到聲調、變調，搭配官方完整原音、小練習與學習護照。",
+     "destinationUrl": "https://taigi-black-bear-academy.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "進入黑熊學院",
+       "url": "https://taigi-black-bear-academy.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "台語黑熊學院 - cjs｜雙唇音實驗室"
+      }
+     ]
+    },
+    {
+     "id": "yayun-03",
+     "buildingName": "拉霸造句亭",
+     "buildingType": "亭",
+     "originalName": "台語造句練習｜小任任，拉吧！拉吧！",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "在校園、夜市與市場情境裡，透過四種句型、語詞拉霸與雙人一問一答，練習把台語說進生活。",
+     "destinationUrl": "https://cjs-taiyu-sentence.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開始造句練習",
+       "url": "https://cjs-taiyu-sentence.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "台語造句練習-小任任 拉吧! 拉吧! - cjs"
+      }
+     ]
+    },
+    {
+     "id": "yayun-04",
+     "buildingName": "晨市聽說閣",
+     "buildingType": "閣",
+     "originalName": "台語生活練習室",
+     "cardType": "工具卡",
+     "accessNote": "公開・免登入",
+     "originalDescription": "從早餐點餐到搭車與天氣，循五步流程練聽說，搭配56段教育部官方原音與教師帶課模式，並保留原98題練習。",
+     "destinationUrl": "https://taigi-week-practice.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開始一週練習",
+       "url": "https://taigi-week-practice.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "台語生活練習室｜七課聽說樣課"
+      }
+     ]
+    },
+    {
+     "id": "yayun-05",
+     "buildingName": "真平學伴洞府",
+     "buildingType": "洞府",
+     "originalName": "南大真平 AI 學伴｜真平電子書專用",
+     "cardType": "工具卡",
+     "accessNote": "電子書專用・授權刮刮卡",
+     "originalDescription": "真平電子書專用的 AI 學伴入口，學生與教師分別進入對應網頁，使用授權刮刮卡登入。",
+     "destinationUrl": "https://kws.oaselab.org/jenpin/sign-in/student/?openExternalBrowser=1",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "學生用入口",
+       "url": "https://kws.oaselab.org/jenpin/sign-in/student/?openExternalBrowser=1",
+       "status": "200",
+       "title": "登入 | 南大真平國網TAIDE台英語AI學伴系統"
+      },
+      {
+       "label": "教師用入口",
+       "url": "https://kws.oaselab.org/jenpin/sign-in/teacher/?openExternalBrowser=1",
+       "status": "200",
+       "title": "教師專用 - 登入 | 南大真平國網TAIDE台英語AI學伴系統"
+      }
+     ]
+    },
+    {
+     "id": "yayun-06",
+     "buildingName": "計畫授業洞府",
+     "buildingType": "洞府",
+     "originalName": "南大真平 AI 學伴｜國科會計畫",
+     "cardType": "工具卡",
+     "accessNote": "計畫專用・需授權碼",
+     "originalDescription": "國科會計畫專案使用的 AI 學伴入口，依學生或教師身分進入對應網頁，使用前需備妥計畫授權碼。",
+     "destinationUrl": "https://kws.oaselab.org/nutntw/sign-in/student/?openExternalBrowser=1",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "學生用入口",
+       "url": "https://kws.oaselab.org/nutntw/sign-in/student/?openExternalBrowser=1",
+       "status": "200",
+       "title": "登入 | 南大真平國網TAIDE台英語AI學伴系統"
+      },
+      {
+       "label": "教師用入口",
+       "url": "https://kws.oaselab.org/nutntw/sign-in/teacher/?openExternalBrowser=1",
+       "status": "200",
+       "title": "教師專用 - 登入 | 南大真平國網TAIDE台英語AI學伴系統"
+      }
+     ]
+    },
+    {
+     "id": "yayun-07",
+     "buildingName": "心聲引渡亭",
+     "buildingType": "亭",
+     "originalName": "SEL × 台語互動教學",
+     "cardType": "工具卡",
+     "accessNote": "互動教材・優化版",
+     "originalDescription": "透過 20 張情境卡與四步引導，用台語練習表達感受、理解他人並思考行動。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/sel-taigi.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟互動教材",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/sel-taigi.html",
+       "status": "200",
+       "title": "SEL × 台語互動式教學網頁"
+      }
+     ]
+    },
+    {
+     "id": "yayun-08",
+     "buildingName": "夜市踅街樓",
+     "buildingType": "樓",
+     "originalName": "做伙來踅夜市",
+     "cardType": "技能卡",
+     "accessNote": "第一課互動版",
+     "originalDescription": "從教材簡介走進夜市場景，透過語詞、對話與四格故事，直接展開課堂練習。",
+     "destinationUrl": "https://taigi-birthday-magic.cjs-1359.chatgpt.site/taigi",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開啟互動教材",
+       "url": "https://taigi-birthday-magic.cjs-1359.chatgpt.site/taigi",
+       "status": "200",
+       "title": "做伙來踅夜市｜高中台語互動教材"
+      },
+      {
+       "label": "學生練習入口",
+       "url": "https://taigi-birthday-magic.cjs-1359.chatgpt.site/taigi?mode=practice",
+       "status": "200",
+       "title": "做伙來踅夜市｜高中台語互動教材"
+      }
+     ]
+    },
+    {
+     "id": "yayun-09",
+     "buildingName": "對對碰語詞亭",
+     "buildingType": "亭",
+     "originalName": "台語語詞對對碰",
+     "cardType": "工具卡",
+     "accessNote": null,
+     "originalDescription": "翻開卡片，連起漢字、台羅與華語，讓語詞練習成為一場小挑戰。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/word-match.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "課本單元版",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/word-match.html",
+       "status": "200",
+       "title": "台語課本｜語詞對對碰"
+      },
+      {
+       "label": "一般版",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-resources/word-match-basic.html",
+       "status": "200",
+       "title": "台語語詞對對碰"
+      }
+     ]
+    },
+    {
+     "id": "yayun-10",
+     "buildingName": "語法轉運殿",
+     "buildingType": "殿",
+     "originalName": "台語語法轉運站",
+     "cardType": "技能卡",
+     "accessNote": "需授權",
+     "originalDescription": "把語法帶進生活情境，從句型理解走向日常表達。",
+     "destinationUrl": "https://taigi-grammar-station.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往作品（需登入／授權）",
+       "url": "https://taigi-grammar-station.cjs-1359.chatgpt.site",
+       "status": "401",
+       "title": "Sign in required"
+      }
+     ],
+     "requiresLogin": true
+    },
+    {
+     "id": "yayun-11",
+     "buildingName": "創意語詞樓",
+     "buildingType": "樓",
+     "originalName": "台語語詞創意學堂",
+     "cardType": "技能卡",
+     "accessNote": "需授權",
+     "originalDescription": "八堂課串起生活語詞、對話與教學活動，讓學生開口練習。",
+     "destinationUrl": "https://taiwanese-word-creative-classroom.cjs-1359.chatgpt.site",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "進入學堂（需授權）",
+       "url": "https://taiwanese-word-creative-classroom.cjs-1359.chatgpt.site",
+       "status": "200",
+       "title": "台語語詞創意學堂｜國中互動教材"
+      }
+     ]
+    },
+    {
+     "id": "yayun-12",
+     "buildingName": "轉運拉霸亭",
+     "buildingType": "亭",
+     "originalName": "語詞拉霸造句練習",
+     "cardType": "工具卡",
+     "accessNote": null,
+     "originalDescription": "轉出意想不到的語詞組合，讓學生接著造句、接著說。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/word-slot.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "開始練習",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/word-slot.html",
+       "status": "200",
+       "title": "語詞拉霸造句練習"
+      }
+     ]
+    },
+    {
+     "id": "yayun-13",
+     "buildingName": "百工雜集閣",
+     "buildingType": "閣",
+     "originalName": "台語教學工具與資源集",
+     "cardType": "資源卡",
+     "accessNote": "工具箱 台語教學",
+     "originalDescription": "將語詞、句型、口說與節慶遊戲收進一份好查找的教學工具集。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-resources/index.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "瀏覽教學網站與網頁",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-resources/index.html",
+       "status": "200",
+       "title": "台語教學資源導航｜JS -- AI 魔法、煉金空間"
+      },
+      {
+       "label": "閱讀資源集",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-tools.pdf",
+       "status": "200",
+       "title": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yinfeng",
+   "name": "吟風雅集島",
+   "category": "創作分享",
+   "guardian": "青鸞",
+   "vehicle": "紙鶴",
+   "color": "#2C3E50",
+   "accent": "#D4AF37",
+   "works": [
+    {
+     "id": "yinfeng-01",
+     "buildingName": "青鸞吟月亭",
+     "buildingType": "亭",
+     "originalName": "古詩吟唱發表會",
+     "cardType": "技能卡",
+     "accessNote": null,
+     "originalDescription": "透過吟唱與文字，分享台語的優美與雅緻。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/poetry-presentation.pptx",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "下載簡報",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/poetry-presentation.pptx",
+       "status": "200",
+       "title": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "qingshi",
+   "name": "青史閱記島",
+   "category": "活動報導",
+   "guardian": "龜靈",
+   "vehicle": "傳送陣",
+   "color": "#5C6B4A",
+   "accent": "#E0A84A",
+   "works": [
+    {
+     "id": "qingshi-01",
+     "buildingName": "青史閱記閣",
+     "buildingType": "閣",
+     "originalName": "南大真平台英語 AI 學伴｜活動報導",
+     "cardType": "紀錄卡",
+     "accessNote": "18 則紀錄",
+     "originalDescription": "集中收錄 18 則活動紀錄，點開後選擇影片或文字報導，回顧教學實作、科普推廣與國際交流。",
+     "destinationUrl": null,
+     "linkStatus": "overview-only",
+     "needsRealUrl": true,
+     "links": [],
+     "records": [
+      {
+       "title": "Kiss Science｜台英語學伴記者會",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=IpBzyY2QDiw"
+        }
+       ]
+      },
+      {
+       "title": "東光國小｜台英語 AI 學伴實作交流",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=efzZrzsFUlQ"
+        }
+       ]
+      },
+      {
+       "title": "自然科學博物館｜Kid’s Science 體驗",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=OPisFRC_gic"
+        }
+       ]
+      },
+      {
+       "title": "Prompt Taiwan｜編碼臺灣主權 AI 臺南篇",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=78f69asijMY"
+        }
+       ]
+      },
+      {
+       "title": "沙崙展示｜TAIDE 臺英語機器人",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=FZiGZBf3_PE"
+        }
+       ]
+      },
+      {
+       "title": "公視獨立特派員｜主權 AI 的挑戰",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=shM5KhjcY4M"
+        }
+       ]
+      },
+      {
+       "title": "馬來西亞｜AI Horizon 2025 工作坊準備",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=ah0sx1sOwH8"
+        }
+       ]
+      },
+      {
+       "title": "馬來西亞｜表達式學習示範",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=ndYYZ43AtYU"
+        }
+       ]
+      },
+      {
+       "title": "台英語開源模型 Tv0.5｜馬來西亞登場",
+       "links": [
+        {
+         "label": "閱讀原文報導",
+         "url": "https://www.cna.com.tw/postwrite/chi/409157"
+        }
+       ]
+      },
+      {
+       "title": "體驗式學習｜Stage 1–4 示範",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=SePJWIB5rMA"
+        }
+       ]
+      },
+      {
+       "title": "香港城市大學｜表達式學習示範",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=Edyko2ZTAyQ"
+        }
+       ]
+      },
+      {
+       "title": "小學生示範｜Tv0.5 開源模型實作",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=NAm77X989OI"
+        }
+       ]
+      },
+      {
+       "title": "今周刊｜會講臺語的 AI 機器人",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=f4baNIOy8Fk&t=206s"
+        }
+       ]
+      },
+      {
+       "title": "仁德國小｜語文學習系統教學示範",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=6gszrIVlGAg"
+        }
+       ]
+      },
+      {
+       "title": "仁德國小｜TAIDE 紀錄片團隊採訪",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=RgPNTMNi4vA"
+        }
+       ]
+      },
+      {
+       "title": "臺英語共學家庭｜啟動儀式",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=5-gQndfnGc0&t=70s"
+        }
+       ]
+      },
+      {
+       "title": "公視台語台｜東光國小採訪",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=1Ld8SYfxSRw&t=32s"
+        }
+       ]
+      },
+      {
+       "title": "民視新聞｜小小科學家臺北場",
+       "links": [
+        {
+         "label": "前往 YouTube 觀看",
+         "url": "https://www.youtube.com/watch?v=Hk99iu4vj-k"
+        }
+       ]
+      }
+     ],
+     "displayTitle": "台英語 AI 學伴",
+     "displaySubtitle": "活動紀錄集"
+    }
+   ]
+  },
+  {
+   "id": "tashan",
+   "name": "他山引渡島",
+   "category": "外部資源",
+   "guardian": "渡靈鶴",
+   "vehicle": "葫蘆",
+   "color": "#5B3A8E",
+   "accent": "#3FC1C9",
+   "works": [
+    {
+     "id": "tashan-01",
+     "buildingName": "他山藏經閣",
+     "buildingType": "閣",
+     "originalName": "AI 指令參考資料庫",
+     "cardType": "資源卡",
+     "accessNote": "8 份文件・7 個主題",
+     "originalDescription": "依用途查找生圖、修圖、提示詞、短影音與工作模板，閱讀原文、複製內容或下載 Word。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/ai-reference/index.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "閱讀與搜尋參考資料",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/ai-reference/index.html",
+       "status": "200",
+       "title": "AI 指令參考資料庫｜JS -- AI 魔法、煉金空間"
+      }
+     ]
+    },
+    {
+     "id": "tashan-02",
+     "buildingName": "問闖辨知洞府",
+     "buildingType": "洞府",
+     "originalName": "GAILearn｜國中互動式教材",
+     "cardType": "資源卡",
+     "accessNote": "外部資源・GAILearn",
+     "originalDescription": "透過提問闖關、資訊查核與數位公民活動，練習理解 AI 並負責任地使用。",
+     "destinationUrl": "https://sites.google.com/view/gailearn/互動式教材/國中互動式教材",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往國中教材資源",
+       "url": "https://sites.google.com/view/gailearn/互動式教材/國中互動式教材",
+       "status": "200",
+       "title": "國中互動式教材"
+      }
+     ]
+    },
+    {
+     "id": "tashan-03",
+     "buildingName": "童蒙識光洞府",
+     "buildingType": "洞府",
+     "originalName": "GAILearn｜國小互動式教材",
+     "cardType": "資源卡",
+     "accessNote": "外部資源・GAILearn",
+     "originalDescription": "從生活中的 AI 出發，透過提問、共創與三色燈挑戰，建立 AI 使用與辨識資訊的基礎。",
+     "destinationUrl": "https://sites.google.com/view/gailearn/互動式教材/國小互動式教材",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往國小教材資源",
+       "url": "https://sites.google.com/view/gailearn/互動式教材/國小互動式教材",
+       "status": "200",
+       "title": "國小互動式教材"
+      }
+     ]
+    },
+    {
+     "id": "tashan-04",
+     "buildingName": "星塑異境樓",
+     "buildingType": "樓",
+     "originalName": "Tripo｜Astra 3D 提示詞與案例",
+     "cardType": "資源卡",
+     "accessNote": "外部資源・Tripo",
+     "originalDescription": "從 3D 場景、互動網站到瀏覽器遊戲，參考作品效果與提示詞，探索自己的創作方向。",
+     "destinationUrl": "https://www.tripo3d.ai/zh/3d-prompts/models/gpt-6-astra#free-prompts",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "前往 Tripo 閱讀原文",
+       "url": "https://www.tripo3d.ai/zh/3d-prompts/models/gpt-6-astra#free-prompts",
+       "status": "200",
+       "title": "Astra 提示词：Blender 与 Three.js 3D 案例 | Tripo"
+      }
+     ]
+    },
+    {
+     "id": "tashan-05",
+     "buildingName": "百納指南閣",
+     "buildingType": "閣",
+     "originalName": "台語教學資源導航",
+     "cardType": "資源卡",
+     "accessNote": "網站與網頁彙整",
+     "originalDescription": "集中瀏覽 4 個教學網頁與 12 個網站入口，包含語詞遊戲、辭典、教材、語音與影片資源。",
+     "destinationUrl": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-resources/index.html",
+     "linkStatus": "confirmed",
+     "needsRealUrl": false,
+     "links": [
+      {
+       "label": "瀏覽教學資源",
+       "url": "https://cjs-learning-portfolio.cjs-1359.chatgpt.site/works/taigi-resources/index.html",
+       "status": "200",
+       "title": "台語教學資源導航｜JS -- AI 魔法、煉金空間"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
