@@ -88,7 +88,7 @@ function setList(on, reason) {
   if(state === 'transit' || state === 'dialog') return;
   listMode = on; list.hidden = !on; $('#scene').hidden = on;
   document.body.classList.toggle('list-mode', on);
-  $('#mode').textContent = on ? '仙域模式' : '列表模式';
+  $('#mode').textContent = on ? '善域模式' : '列表模式';
   $('#mode').setAttribute('aria-pressed', String(on));
   $('#status').textContent = reason || (on ? '依島閱覽，點選作品開啟卷軸。' : '拖曳環望 · 點選浮島入境');
   world?.setActive(!on);
