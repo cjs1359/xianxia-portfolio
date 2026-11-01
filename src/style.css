@@ -28,3 +28,5 @@
 .leader-lines .leader{fill:none;stroke:#b8892f;stroke-width:1.2;stroke-dasharray:4 3;opacity:.9}
 .leader-lines .leader-dot{fill:#c8452f;stroke:#fff8e6;stroke-width:1.2}
 .list-mode .leader-lines{display:none}
+@media(min-width:768px){.intro{top:112px;left:3vw;width:210px;padding:12px 16px}.intro h1{font-size:24px;letter-spacing:4px;margin:8px 0;line-height:1.45}.intro>#intro-content>p:last-child{font-size:12px;line-height:1.9;margin:0}.intro .eyebrow{font-size:10px;margin:0}.device-tip{margin:10px 0 0}#island-nav{max-width:680px;bottom:84px}}
+@media(min-width:768px){.device-tip{white-space:nowrap;font-size:12px;padding:6px 10px}.intro{width:auto;max-width:240px}}

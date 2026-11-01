@@ -5,6 +5,7 @@ import { atmosphere, waterfall, inkComposer, runeHalo } from './ink.js';
 import { createVehicle } from './vehicles.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+const OV={s:2.1,fov:16,rx:50,rz:40,dx:0,dy:.8,grid:1,gx:31,gz:26,off:4,fog:.0009,norm:1.25};
 export function createWorld(data, actions) {
   const host = document.querySelector('#scene');
   const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:false });
@@ -33,7 +34,7 @@ export function createWorld(data, actions) {
   quality();
   function label(text,position,cls,fn){const b=document.createElement('button');b.className=`label ${cls}`;b.textContent=text;b.onclick=e=>{e.stopPropagation();fn(b)};const o=new CSS2DObject(b);o.position.copy(position);return o;}
   data.islands.forEach((island,i)=>{
-    const angle=i/6*Math.PI*2;const g=new THREE.Group();g.position.set(Math.cos(angle)*50,Math.sin(i*2)*1.5,Math.sin(angle)*40);scene.add(g);
+    const angle=i/6*Math.PI*2;const g=new THREE.Group();if(OV.grid)g.position.set(((i%3)-1)*OV.gx+(i<3?-OV.off:OV.off),Math.sin(i*2)*1.5,(i<3?-1:1)*OV.gz);else g.position.set(Math.cos(angle)*OV.rx,Math.sin(i*2)*1.5,Math.sin(angle)*OV.rz);scene.add(g);
     const radius=island.works.length>8?7:5.5;
     const terrain=islandTerrain(radius,i);accents(terrain.group,island.id,radius);
     const land=bake(terrain.group);terrain.transient.forEach(g=>g.dispose());g.add(land);land.userData.island=island;targets.push(land);
@@ -282,11 +283,11 @@ export function createWorld(data, actions) {
     return {target,end:target.clone().addScaledVector(forward,distance)};
   }
   function islandVisibility(){
-    islands.forEach(({g},id)=>{g.visible=innerWidth<768||!current||id===current.id;g.scale.setScalar(innerWidth>=768&&!current?1.7:1);g.updateMatrixWorld(true);});
+    const rmax=Math.max(...[...islands.values()].map(x=>x.radius));islands.forEach(({g,radius},id)=>{g.visible=innerWidth<768||!current||id===current.id;g.scale.setScalar(innerWidth>=768&&!current?OV.s*Math.min(OV.norm,Math.pow(rmax/radius,.6)):1);g.updateMatrixWorld(true);});const f=innerWidth>=768&&!current?OV.fov:43;scene.fog.density=innerWidth>=768&&!current?OV.fog:.0025;if(camera.fov!==f){camera.fov=f;camera.updateProjectionMatrix();}
   }
   // Desktop/tablet overview: pull the camera in until island geometry would touch the header, intro panel, island buttons, bottom bar or screen edge.
   function overviewTighten(){const q=s=>{const r=document.querySelector(s)?.getBoundingClientRect();return r&&r.width?r:null};
-    const obs=['header','.intro','#island-nav','.bottom'].map(q).filter(Boolean),m=10,W=innerWidth,H=innerHeight;
+    const obs=["header",".intro","#island-nav",".bottom"].map(q).filter(Boolean),m=6,W=innerWidth,H=innerHeight;
     const pts=[...islands.keys()].flatMap(id=>islandBox({id}).filter((p,k)=>k%7===0)),t=controls.target.clone(),dir=camera.position.clone().sub(t),base=dir.length();dir.normalize();
     const cam=camera.clone();const ok=dd=>{cam.position.copy(t).addScaledVector(dir,dd);cam.lookAt(t);cam.updateMatrixWorld();cam.updateProjectionMatrix();
       for(const p of pts){const v=p.clone().project(cam);if(v.z>1)return false;const x=(v.x+1)/2*W,y=(1-v.y)/2*H;if(x<m||x>W-m||y<m||y>H-m)return false;
@@ -303,7 +304,7 @@ export function createWorld(data, actions) {
       const up=new THREE.Vector3(0,1,-.65).normalize();
       const points=[...islands.values()].flatMap(({g,radius})=>[-1,1].flatMap(x=>[-1,1].map(y=>g.position.clone().add(new THREE.Vector3(x*radius,0,0)).addScaledVector(up,y*7))));
       camera.position.copy(fittedPosition(controls.target,new THREE.Vector3(0,.65,1),points,true));
-    }else camera.position.copy(fittedPosition(controls.target,new THREE.Vector3(.15,.95,1),[...islands.keys()].flatMap(id=>islandBox({id}).filter((p,k)=>k%4===0)),true));overviewTighten();
+    }else camera.position.copy(fittedPosition(controls.target,new THREE.Vector3(OV.dx,OV.dy,1),[...islands.keys()].flatMap(id=>islandBox({id}).filter((p,k)=>k%4===0)),true));overviewTighten();
     workLabels.forEach(x=>x.label.visible=false);islands.forEach(x=>x.label.visible=true);controls.update();}
   function resize(){layoutIslands();islandVisibility();quality();const dpr=Math.min(devicePixelRatio,1.5);renderer.setPixelRatio(dpr);renderer.setSize(innerWidth,innerHeight);labels.setSize(innerWidth,innerHeight);composer?.resize(innerWidth,innerHeight,dpr);
     if(flight){framing(false);}else if(current){const {target,end}=islandView(current);camera.position.copy(end);controls.target.copy(target);controls.update();}else overview();}
