@@ -1,6 +1,16 @@
 import './style.css';
 const $ = s => document.querySelector(s);
 const list = $('#list'), dialog = $('#scroll');
+const introToggle = $('#intro-toggle');
+function collapseIntro() {
+  introToggle.setAttribute('aria-expanded', 'false');
+  introToggle.textContent = '循雲入境 ▾';
+}
+introToggle.onclick = () => {
+  const expanded = introToggle.getAttribute('aria-expanded') !== 'true';
+  introToggle.setAttribute('aria-expanded', String(expanded));
+  introToggle.textContent = expanded ? '循雲入境 ▴' : '循雲入境 ▾';
+};
 let data, world, state = 'overview', listMode = false, opener, previousState;
 function openWork(island, work, trigger) {
   if (state === 'transit' || state === 'dialog') return;
@@ -121,6 +131,7 @@ async function init() {
 }
 async function enter(island) {
   if(!world || listMode || !['overview','island'].includes(state)) return;
+  collapseIntro();
   state = 'transit'; $('#status').textContent = `乘${island.vehicle}，前往${island.name}…`;
   $('#back').hidden = true;
   await world.travel(island);
