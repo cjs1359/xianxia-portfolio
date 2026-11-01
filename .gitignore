@@ -1,2 +1,4 @@
 node_modules/
 dist/
+TASK*.md
+REVIEW_CLAUDE*.md
