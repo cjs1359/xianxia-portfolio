@@ -190,9 +190,32 @@ export function createWorld(data, actions) {
     g.traverse(o=>{if(!o.isMesh||!o.geometry||!shown(o))return;const m=[].concat(o.material);if(m.every(x=>!x||x.visible===false||x.colorWrite===false||(x.transparent&&x.opacity<.05)))return;
       const pos=o.geometry.attributes.position;if(!pos)return;const step=Math.max(1,Math.floor(pos.count/1500));for(let k=0;k<pos.count;k+=step)pts.push(new THREE.Vector3().fromBufferAttribute(pos,k).applyMatrix4(o.matrixWorld));});return pts;}
   function projectRect(pts,cam){let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;pts.forEach(q=>{const p=q.clone().project(cam);const x=(p.x+1)/2*innerWidth,y=(1-p.y)/2*innerHeight;x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);});return {x:x0,y:y0,r:x1,b:y1};}
-  function fitInside(island,view){const box=islandBox(island),cam=camera.clone(),dir=view.end.clone().sub(view.target),safe=safeRect();let d=dir.length();dir.normalize();
-    // Shift the aim vertically so the box centre sits in the middle of the clear band, then back off until it fits.
+  function uiRects(){const q=x=>{const r=document.querySelector(x)?.getBoundingClientRect();return r&&r.width?r:null};return {header:safeRect().top,nav:q('#island-nav'),bottom:q('.bottom')};}
+  function tagged(island){const g=islands.get(island.id).g;g.updateMatrixWorld(true);const surf=g.getWorldPosition(new THREE.Vector3()).y+.15;
+    return islandBox(island).map(p=>({p,hard:p.y>surf}));}
+  // Desktop rule: every point stays below the header and inside the viewport; nothing touches the island-button block;
+  // buildings/trees (points above the island surface) also stay above the bottom bar, while rocks/mist below the surface may pass under it.
+  function desktopCheck(pts,cam){const ui=uiRects(),m=12,W=innerWidth,H=innerHeight;let hardOut=0,softOut=0,navHit=0,x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
+    pts.forEach(({p,hard})=>{const v=p.clone().project(cam);const behind=v.z>1||v.z<-1;const x=(v.x+1)/2*W,y=(1-v.y)/2*H;if(behind){hard?hardOut++:softOut++;return;}x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);
+      let bad=x<m||x>W-m||y<ui.header+m||y>H;
+      if(ui.nav&&x>ui.nav.left-m&&x<ui.nav.right+m&&y>ui.nav.top-m&&y<ui.nav.bottom+m){bad=true;navHit++;}
+      if(hard&&ui.bottom&&y>ui.bottom.top-m)bad=true;
+      if(bad){hard?hardOut++:softOut++;}});
+    return {hardOut,softOut,navHit,x:x0,r:x1,y:y0,b:y1,ok:hardOut===0&&softOut===0};}
+  function fitInside(island,view){const cam=camera.clone(),dir=view.end.clone().sub(view.target),safe=safeRect();let d=dir.length();dir.normalize();
     const target=view.target.clone();
+    if(innerWidth>=768){const pts=tagged(island),ui=uiRects(),right=new THREE.Vector3().crossVectors(camera.up,dir).normalize();
+      const bandMid=(ui.header+(ui.bottom?ui.bottom.top:innerHeight))/2,base=d;
+      const place=(t,dd)=>{cam.position.copy(t).addScaledVector(dir,dd);cam.lookAt(t);cam.updateMatrixWorld();cam.updateProjectionMatrix();return desktopCheck(pts,cam);};
+      const centre=(t,dd,cx)=>{for(let k=0;k<4;k++){const c=place(t,dd);if(!isFinite(c.x))return;const wpp=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*dd/innerHeight;
+        t.addScaledVector(right,((c.x+c.r)/2-cx)*wpp);t.y-=((c.y+c.b)/2-bandMid)*wpp;}};
+      let best=null;
+      for(const cx of [innerWidth*.5,innerWidth*.46,innerWidth*.42,innerWidth*.38]){const t=view.target.clone();let lo=base*.3,hi=base*2.5;
+        for(let k=0;k<18;k++){const mid=(lo+hi)/2;centre(t,mid,cx);if(place(t,mid).ok)hi=mid;else lo=mid;}
+        centre(t,hi,cx);let dd=hi;while(!place(t,dd).ok&&dd<base*4)dd*=1.02;
+        if(!best||dd<best.d)best={t:t.clone(),d:dd};}
+      return {target:best.t,end:best.t.clone().addScaledVector(dir,best.d)};}
+    const box=islandBox(island);
     for(let i=0;i<60;i++){cam.position.copy(target).addScaledVector(dir,d);cam.lookAt(target);cam.updateMatrixWorld();cam.updateProjectionMatrix();
       const r=projectRect(box,cam);const m=16;const fits=r.x>=safe.left+m&&r.r<=safe.right-m&&r.y>=safe.top+m&&r.b<=safe.bottom-m;
       const mid=(safe.top+safe.bottom)/2,cy=(r.y+r.b)/2;
@@ -200,6 +223,7 @@ export function createWorld(data, actions) {
       if(fits)break;d*=1.05;}
     return {target,end:target.clone().addScaledVector(dir,d)};}
   window.__islandRect=()=>current?{...projectRect(islandBox(current),camera),safe:safeRect()}:null;
+  window.__islandCheck=()=>current&&innerWidth>=768?desktopCheck(tagged(current),camera):null;
   function islandView(island){return fitInside(island,islandViewRaw(island));}
   function islandViewRaw(island){
     const {bounds,g,radius}=islands.get(island.id),target=bounds.getCenter(new THREE.Vector3());
