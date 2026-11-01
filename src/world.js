@@ -181,7 +181,27 @@ export function createWorld(data, actions) {
     point.labelWidth=Math.max(label.element.scrollWidth,label.element.textContent.length*(innerWidth<768?12:14)+28);
     return point;
   }
-  function islandView(island){
+  function safeRect(){const q=x=>document.querySelector(x)?.getBoundingClientRect();const gap=8;
+    const tops=['header','.brand','#mode'].map(q).filter(r=>r&&r.width).map(r=>r.bottom+gap);
+    const lows=['#island-nav','.bottom'].map(q).filter(r=>r&&r.width&&r.top>innerHeight*.4).map(r=>r.top-gap);
+    return {left:gap,right:innerWidth-gap,top:Math.max(gap,...tops),bottom:Math.min(innerHeight-gap,...lows)};}
+  function islandBox(island){const g=islands.get(island.id).g;g.updateMatrixWorld(true);const pts=[];
+    const shown=o=>{for(let x=o;x;x=x.parent){if(!x.visible)return false;if(x===g)return true;}return true;};
+    g.traverse(o=>{if(!o.isMesh||!o.geometry||!shown(o))return;const m=[].concat(o.material);if(m.every(x=>!x||x.visible===false||x.colorWrite===false||(x.transparent&&x.opacity<.05)))return;
+      const pos=o.geometry.attributes.position;if(!pos)return;const step=Math.max(1,Math.floor(pos.count/1500));for(let k=0;k<pos.count;k+=step)pts.push(new THREE.Vector3().fromBufferAttribute(pos,k).applyMatrix4(o.matrixWorld));});return pts;}
+  function projectRect(pts,cam){let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;pts.forEach(q=>{const p=q.clone().project(cam);const x=(p.x+1)/2*innerWidth,y=(1-p.y)/2*innerHeight;x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);});return {x:x0,y:y0,r:x1,b:y1};}
+  function fitInside(island,view){const box=islandBox(island),cam=camera.clone(),dir=view.end.clone().sub(view.target),safe=safeRect();let d=dir.length();dir.normalize();
+    // Shift the aim vertically so the box centre sits in the middle of the clear band, then back off until it fits.
+    const target=view.target.clone();
+    for(let i=0;i<60;i++){cam.position.copy(target).addScaledVector(dir,d);cam.lookAt(target);cam.updateMatrixWorld();cam.updateProjectionMatrix();
+      const r=projectRect(box,cam);const m=16;const fits=r.x>=safe.left+m&&r.r<=safe.right-m&&r.y>=safe.top+m&&r.b<=safe.bottom-m;
+      const mid=(safe.top+safe.bottom)/2,cy=(r.y+r.b)/2;
+      if(Math.abs(cy-mid)>4&&i<20){const ndc=(cy-mid)/innerHeight*2;const worldPerNdc=Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*d;target.y-=ndc*worldPerNdc*.8;continue;}
+      if(fits)break;d*=1.05;}
+    return {target,end:target.clone().addScaledVector(dir,d)};}
+  window.__islandRect=()=>current?{...projectRect(islandBox(current),camera),safe:safeRect()}:null;
+  function islandView(island){return fitInside(island,islandViewRaw(island));}
+  function islandViewRaw(island){
     const {bounds,g,radius}=islands.get(island.id),target=bounds.getCenter(new THREE.Vector3());
     if(innerWidth<768){
       framing(false);
