@@ -62,7 +62,51 @@ export function createWorld(data, actions) {
       label.element.textContent=mobile&&name.length>8?name.slice(0,7)+'…':name;
       label.element.title=name;label.element.setAttribute('aria-label',name);
     });
+    // Remove desktop-only width constraints when crossing back to mobile.
+    if(mobile)[...workLabels.map(x=>x.label),...[...islands.values()].map(x=>x.label)].forEach(l=>{
+      l.element.style.maxWidth='';l.element.style.overflow='';l.element.style.textOverflow='';
+    });
     scene.updateMatrixWorld(true);
+  }
+  function arrangeDesktopLabels(){
+    if(innerWidth<768||flight)return;
+    const entries=current?workLabels.filter(x=>x.island===current).map(x=>x.label):[...islands.values()].map(x=>x.label);
+    const rect=selector=>document.querySelector(selector).getBoundingClientRect();
+    const header=rect('header'),intro=rect('.intro'),nav=rect('#island-nav'),bottom=rect('.bottom');
+    const gap=8;
+    // A conservative clear rectangle also excludes the brand and mode controls
+    // inside the header, and the intro only while it is displayed in overview.
+    const left=!current&&intro.width?intro.right+gap:gap,right=innerWidth-gap;
+    const top=Math.max(gap,header.bottom+gap,rect('.brand').bottom+gap,rect('#mode').bottom+gap);
+    const lower=Math.min(innerHeight-gap,nav.top-gap,bottom.top-gap);
+    const projected=entries.filter(l=>l.visible).map(l=>({l,p:l.getWorldPosition(new THREE.Vector3()).project(camera)})).sort((a,b)=>a.p.x-b.p.x);
+    if(!projected.length)return;
+    const height=Math.max(...projected.map(({l})=>l.element.offsetHeight));
+    const rows=Math.max(1,Math.floor((lower-top+gap)/(height+gap)));
+    const count=Math.min(projected.length,Math.max(2,Math.ceil(projected.length/rows)));
+    const columnWidth=(right-left-gap*(count-1))/count;
+    for(let index=0;index<count;index++){
+      const column=projected.slice(Math.floor(index*projected.length/count),Math.floor((index+1)*projected.length/count)).sort((a,b)=>b.p.y-a.p.y);
+      const minX=left+index*(columnWidth+gap),maxX=minX+columnWidth;
+      column.forEach(({l})=>{
+        l.element.style.maxWidth=`${columnWidth}px`;
+        l.element.style.overflow='hidden';l.element.style.textOverflow='ellipsis';
+        if(!l.element.title)l.element.title=l.element.textContent;
+      });
+      const heights=column.map(({l})=>l.element.offsetHeight);
+      let edge=top;
+      const positions=column.map(({p},i)=>{
+        const y=Math.max(edge+heights[i]/2,Math.min(lower-heights[i]/2,(1-p.y)*innerHeight/2));
+        edge=y+heights[i]/2+gap;return y;
+      });
+      let edgeBelow=lower;
+      for(let i=column.length-1;i>=0;i--){positions[i]=Math.min(positions[i],edgeBelow-heights[i]/2);edgeBelow=positions[i]-heights[i]/2-gap;}
+      column.forEach(({l,p},i)=>{
+        const width=l.element.offsetWidth;
+        const x=Math.max(minX+width/2,Math.min(maxX-width/2,(p.x+1)*innerWidth/2));
+        l.element.style.transform=`translate(-50%,-50%) translate(${x}px,${positions[i]}px)`;
+      });
+    }
   }
   // Pack screen-space labels into two independent columns after CSS2D projection.
   // Recomputed after orbiting, so every work remains reachable on either side.
@@ -187,7 +231,7 @@ export function createWorld(data, actions) {
       if(t===1){const f=flight;flight=null;f.finish();}
     }else controls.update();
     if(!reduced.matches){air.update(dt);halos.forEach(h=>h.rotation.z+=dt*.08);}
-    if(composer)composer.render();else renderer.render(scene,camera);labels.render(scene,camera);arrangeMobileLabels();
+    if(composer)composer.render();else renderer.render(scene,camera);labels.render(scene,camera);arrangeMobileLabels();arrangeDesktopLabels();
   }
   renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();active=false;if(flight){const f=flight;flight=null;f.finish();}actions.fail();});raf=requestAnimationFrame(frame);
   return {travel,overview,setActive(value){active=value;sampleTime=0;},dispose(){
