@@ -20,3 +20,11 @@
 }
 
 @media(max-width:767px){.work-label{font-size:11px;min-height:30px;padding:5px 7px;max-width:calc(50vw - 12px);overflow:hidden;text-overflow:ellipsis}.island-label{font-size:11px;letter-spacing:1px;padding:6px;min-height:34px;max-width:calc(50vw - 12px)}}
+
+.island-label{opacity:0;pointer-events:none;transition:opacity .18s}.island-label.show{opacity:1;pointer-events:auto}
+.device-tip{display:inline-block;margin:14px 0 0;padding:6px 12px;font-size:13px;letter-spacing:2px;color:#9a3b2a;background:rgba(255,250,238,.85);border:1px solid rgba(184,86,61,.55);border-radius:2px;box-shadow:0 1px 0 rgba(163,121,26,.25)}
+@media(max-width:767px){.device-tip{display:block;margin:8px 0 0;font-size:14px;font-weight:600;text-align:center;background:#fff7e6;border-color:#b8563d}}
+.leader-lines{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:2;overflow:visible}
+.leader-lines .leader{fill:none;stroke:#b8892f;stroke-width:1.2;stroke-dasharray:4 3;opacity:.9}
+.leader-lines .leader-dot{fill:#c8452f;stroke:#fff8e6;stroke-width:1.2}
+.list-mode .leader-lines{display:none}
